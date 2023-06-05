@@ -1,0 +1,84 @@
+.THIS {
+}
+
+.THIS #tinderslide {
+    height: 500px !important;
+    width: 400px !important;
+    margin: auto;
+}
+
+.THIS #tinderslide .img {
+    height: 400px;
+    width: 400px;
+    margin: auto;
+}
+
+
+.THIS #tinderslide li {
+    background: white !important;
+    border-radius: 10px;
+    padding: 0px;
+}
+
+.THIS #tinderslide_output {
+    height: 500px !important;
+    width: 400px !important;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    margin: auto;
+    text-align: center;
+}
+
+.THIS #tinderslide_output_message {
+    position: absolute;
+    top: 65%;
+    left: 0;
+    right: 0;
+    font-size: 1rem; 
+}
+
+.THIS .hide {
+    display: none;
+}
+
+.THIS .imageDesc {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.THIS .imageName {
+    padding-top:1rem;
+}
+
+
+@media screen and (max-width: 415px) {
+    .THIS #tinderslide {
+          height: 400px !important;
+          width: 300px !important;
+          margin: auto;
+      }
+  
+      .THIS #tinderslide_output {
+          height: 400px !important;
+          width: 300px !important;
+          margin: auto;
+      }
+      
+      .THIS #tinderslide .img {
+          height: 300px;
+          width: 300px;
+          margin: auto;
+      }
+  
+      .THIS #tinderslide_output_message {
+          position: absolute;
+          top: 65%;
+          left: 0;
+          right: 0;
+          font-size: 0.8125rem;;
+      }
+  
+  }

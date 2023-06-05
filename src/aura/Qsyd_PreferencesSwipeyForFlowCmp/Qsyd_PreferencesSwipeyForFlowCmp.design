@@ -1,0 +1,5 @@
+<design:component label="Swipey 1.0 (deprecated - console only)">
+    <design:attribute name="staticResourceZipName" label="Static Resource (Zipfile) Name" description="Please add all images in a zipfile and upload it as a static resource, Please enter the name of the static resource in this field" />
+    <design:attribute name = "completedMessage" label = "Completion Message" description = "Message to display on the final screen." />
+    <design:attribute name = "multipicklistSwipeyResult" label="Swipey result - Multipicklist field value" />
+</design:component>

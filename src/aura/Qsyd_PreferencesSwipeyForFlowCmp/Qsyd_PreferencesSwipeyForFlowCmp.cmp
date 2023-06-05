@@ -1,0 +1,84 @@
+<!--
+ * Copyright (c) 2020, salesforce.com, inc.
+ * All rights reserved.
+ * SPDX-License-Identifier: BSD-3-Clause
+ * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/BSD-3-Clause
+ -->
+
+<!--
+   	Author:         Elly Yijun Zhu
+    Company:        Salesforce
+    Description:    Preferences Capture
+    Component:      Qsyd_PreferencesSwipeyForFlowCmp
+    Apex:           
+
+
+	History:
+
+	When            Who                 What
+	30-Aug-2018     Elly Yijun Zhu
+	
+-->
+ 
+<aura:component access = "global"
+                implements = "lightning:availableForFlowScreens"
+                controller="Qsyd_PreferencesSwipeyForFlow_Cx">
+
+     <!-- Libraries -->
+     <ltng:require 
+        styles= "{!join(',', 
+            $Resource.QE_jTinder + '/css/jTinder.css'
+            )}"   
+        scripts="{!join(',', 
+            $Resource.QE_jTinder + '/js/jquery321min.js',
+            $Resource.QE_jTinder + '/js/jquery.transform2d.js', 
+            $Resource.QE_jTinder + '/js/jquery.jTinder.js'
+        )}"
+
+        afterScriptsLoaded = "{!c.handleInit}" />
+
+    <!-- Attributes : Inputs -->
+    <aura:attribute name = "staticResourceZipName" type = "String" default = "QE_SwipeImagesZip"/>
+    <aura:attribute name = "completedMessage" type = "String" default = "We have saved your preferences."/>
+    
+    <!-- Attributes : Internal -->
+    <aura:attribute name = "staticResourceZipImagefiles" type = "List" default = ""/>
+    <aura:attribute name = "likedItems" type="List" default=""/>
+    <aura:attribute name = "dislikedItems" type="List" default=""/>
+    <aura:attribute name = "sitePrefix" type="String" />
+
+    <!-- Attributes : Outputs -->
+    <aura:attribute name = "multipicklistSwipeyResult" type="String" default=""/>
+
+    <!-- Attributes : Test Use -->
+    <!--<aura:attribute name = "staticResourceZipImagefileNames" type="List" default="[
+        { 
+            title : 'Running',
+            url : 'Running.jpg'
+        },
+        { 
+            title : 'Yoga',
+            url : 'Yoga.jpg'
+        }
+    ]"/> -->
+
+    <!-- Component : Internal -->
+    <div class="slds-m-top_medium">
+        <div id="tinderslide" class="slds-m-around_xx-small">
+            <ul>
+                <aura:iteration items = "{! v.staticResourceZipImagefiles }" var = "item" indexVar="idx" >
+                    <li class="{!'pane' + (idx+1) }">
+                        <div class="img" style="{! 'background:url(' + '\'' + v.sitePrefix || '' + '/resource/' + v.staticResourceZipName + '/'+ item.url + '\'' + ') no-repeat scroll center center !important; background-size: contain !important;'}"></div>
+                        <div class="imageName">{!item.title}</div>
+                        <div class="like"></div> 
+                        <div class="dislike"></div>
+                    </li>
+                </aura:iteration>
+            </ul>
+        </div>
+        <div id="tinderslide_output" class="hide" style="{!'background-image:url('+ $Resource.QE_SwipeLastImage + ');'}">
+
+        </div>
+         
+    </div>
+</aura:component>

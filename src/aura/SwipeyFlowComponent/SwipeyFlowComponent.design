@@ -1,0 +1,8 @@
+<design:component label="Swipey 2.0">
+    <design:attribute name = "completedMessage" label = "Input - Completion message"    description = "Message to display on the final screen." />
+    <design:attribute name = "imageCategory"    label = "Input - Image category filter" description = "Filter displayed images by using SwipeyImages category value. By default all images are returned."/>
+    <design:attribute name = "likeImageUrl"     label = "Input - Url to override the default like image"  description = "Supported image format includes jpeg/jpg, png, gif"/>
+    <design:attribute name = "dislikeImageUrl"  label = "Input - Url to override the default dislike image" description = "Supported image format includes jpeg/jpg, png, gif" />
+    <design:attribute name = "multipicklistSwipeyResult" label="Output - Swipey result - Multipicklist field value"  />
+    
+</design:component>
