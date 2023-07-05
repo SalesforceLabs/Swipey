@@ -3,7 +3,6 @@
     <fullName>Swipey</fullName>
     <apiAccessLevel>Unrestricted</apiAccessLevel>
     <description>Instruction document: https://salesforce.quip.com/8iRiAFyZYzI4</description>
-    <namespacePrefix>Swipey</namespacePrefix>
     <types>
         <members>HexUtil</members>
         <members>Puff</members>
