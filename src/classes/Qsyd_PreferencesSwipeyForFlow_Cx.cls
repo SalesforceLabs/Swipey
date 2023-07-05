@@ -1,12 +1,11 @@
-<!--
+/*
  * Copyright (c) 2020, salesforce.com, inc.
  * All rights reserved.
  * SPDX-License-Identifier: BSD-3-Clause
  * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/BSD-3-Clause
- -->
+ */
  
 /*
-<!--
    	Author:         Elly Yijun Zhu
     Company:        Salesforce
     Description:    Preferences Capture 
@@ -19,7 +18,6 @@
 	When            Who                 What
 	30-Aug-2018     Elly Yijun Zhu
 	
--->
 */
 global  without sharing  class Qsyd_PreferencesSwipeyForFlow_Cx { 
 
